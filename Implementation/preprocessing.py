@@ -64,7 +64,7 @@ def get_top_n_trigram(corpus, n=None):
     return words_freq[:n]
 
 def word_lemmatizer(text):
-    lem_text = [WordNetLemmatizer().lemmatize(i) for i in text]
+    lem_text = WordNetLemmatizer().lemmatize(text)
     return lem_text
 
 def remove_url(text):
@@ -90,4 +90,4 @@ def deEmojify(text):
 
 
 
-data  = pd.read_csv("data.csv") #after getting data
+#data  = pd.read_csv("data.csv") #after getting data
